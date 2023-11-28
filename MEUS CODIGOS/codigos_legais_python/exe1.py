@@ -1,6 +1,0 @@
-name = input ('Digite seu nome ')
-age = int(input('Digite sua idade '))
-peso = float(input('digite seu peso '))
-print ("ola ",nome) 
-print ("idade ",idade)
-print ("peso ",peso) 
