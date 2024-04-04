@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Professor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Arquivo de estilos personalizados -->
+</head>
+<body>
+  <!-- Topo fixo -->
+  <div class="topo-fixo">
+    <div class="container">
+      <div class="row">
+        <!-- Nome da instituição à esquerda -->
+        <div class="col-md-6">
+          <a href="index.html" class="nome-instituicao mr-auto">INSTITUIÇÃO EDUCA MAIS</a>
+        </div>
+        <!-- Botões nos cantos direitos -->
+        <div class="col-md-6 text-right">
+          <a href="#" onclick="window.history.back();" class="btn btn-secondary btn-lg ml-2 botao-topo">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Cadastro de Professor</h2>
+        <!-- Formulário de cadastro -->
+        <form id="cadastroForm">
+          <div class="form-group">
+            <label for="email">Email (após @instituiçãoeducamais.com.br):</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" id="senha" name="senha" required>
+          </div>
+          <!-- Removido o campo de "Instituição" -->
+          <div class="form-group">        
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+          </div>
+        </form>
+        <!-- Link para o formulário de login do professor -->
+        <div class="text-center mt-3">
+          <p>Já tem uma conta? <a href="login_professor.html">Faça login aqui</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script_cadastro_professor.js"></script> <!-- Arquivo de scripts personalizados -->
+</body>
+</html>

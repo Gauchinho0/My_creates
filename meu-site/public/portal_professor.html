@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Professor</title>
+    <link rel="stylesheet" href="styles_professor.css">
+</head>
+<body>
+    <div class="topo-fixo">
+        <div class="container">
+          <div class="row">
+                <!-- Nome da instituição à esquerda -->
+                <div class="col-md-6">
+                    <a href="index.html" class="nome-instituicao mr-auto">INSTITUIÇÃO EDUCA MAIS</a>
+                </div>
+                <!-- Botões nos cantos direitos -->
+                <div class="col-md-6 text-right">
+                    <a href="index.html" class="btn btn-secondary btn-lg ml-2 botao-topo">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="turmas">
+
+            <h2>Horário de Aulas</h2>
+        <table id="turmasTable">
+                <thead>
+                    <tr>
+                        <th>Número da Turma</th>
+                        <th>Curso</th>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                        <th>Horário Manhã</th>
+                        <th>Horário Tarde</th>
+                        <th>Horário Noite</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <!-- Turma 1: Engenharia Civil -->
+                    <tr>
+                        <td>1</td>
+                        <td>Engenharia Civil</td>
+                        <td>Mecânica dos Fluidos</td>
+                        <td>Prof. Carlos</td>
+                        <td>08:00 - 10:00</td>
+                        <td>14:00 - 16:00</td>
+                        <td>19:00 - 21:00</td>
+                        <td></td>
+                    </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Engenharia Civil</td>
+                    <td>Estruturas de Concreto Armado</td>
+                    <td>Prof. Ana</td>
+                    <td>09:00 - 11:00</td>
+                    <td>15:00 - 17:00</td>
+                    <td>20:00 - 22:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Engenharia Civil</td>
+                    <td>Fundamentos de Engenharia</td>
+                    <td>Prof. José</td>
+                    <td>10:00 - 12:00</td>
+                    <td>16:00 - 18:00</td>
+                    <td>21:00 - 23:00</td>
+                    <td></td>
+                </tr>
+    
+                <!-- Turma 2: Medicina -->
+                <tr>
+                    <td>4</td>
+                    <td>Medicina</td>
+                    <td>Anatomia Humana</td>
+                    <td>Prof. Maria</td>
+                    <td>08:30 - 10:30</td>
+                    <td>14:30 - 16:30</td>
+                    <td>19:30 - 21:30</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Medicina</td>
+                    <td>Farmacologia Clínica</td>
+                    <td>Prof. Pedro</td>
+                    <td>09:30 - 11:30</td>
+                    <td>15:30 - 17:30</td>
+                    <td>20:30 - 22:30</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Medicina</td>
+                    <td>Neurologia</td>
+                    <td>Prof. João</td>
+                    <td>10:30 - 12:30</td>
+                    <td>16:30 - 18:30</td>
+                    <td>21:30 - 23:30</td>
+                    <td></td>
+                </tr>
+    
+                <!-- Turma 3: Administração de Empresas -->
+                <tr>
+                    <td>7</td>
+                    <td>Administração de Empresas</td>
+                    <td>Marketing Estratégico</td>
+                    <td>Prof. Rafaela</td>
+                    <td>08:00 - 10:00</td>
+                    <td>14:00 - 16:00</td>
+                    <td>19:00 - 21:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Administração de Empresas</td>
+                    <td>Contabilidade Financeira</td>
+                    <td>Prof. Paulo</td>
+                    <td>09:00 - 11:00</td>
+                    <td>15:00 - 17:00</td>
+                    <td>20:00 - 22:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Administração de Empresas</td>
+                    <td>Gestão de Recursos Humanos</td>
+                    <td>Prof. Camila</td>
+                    <td>10:00 - 12:00</td>
+                    <td>16:00 - 18:00</td>
+                    <td>21:00 - 23:00</td>
+                    <td></td>
+                </tr>
+                <!-- Adicione mais turmas seguindo o mesmo padrão -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="alunos">
+        <h2>Alunos Matriculados</h2>
+        <ul id="alunosList">
+            <!-- Aqui serão inseridos os alunos matriculados via JavaScript -->
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script_portal_professor.js"></script>
+</body>
+</html>

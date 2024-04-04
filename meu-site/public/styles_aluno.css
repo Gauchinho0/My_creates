@@ -1,0 +1,125 @@
+/* Estilo para o topo fixo */
+.topo-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, #1d002efd, #530083fd, #7700ff);
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0 30px;
+}
+
+.nome-instituicao {
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Manter a mesma cor para todos os estados do link */
+.nome-instituicao:hover,
+.nome-instituicao:active,
+.nome-instituicao:visited {
+  color: #ffffff;
+}
+
+/* Estilos para os botões na barra superior */
+.botao-topo {
+  background: linear-gradient(to top, #1e043b, #8c00ff9a, #8c00ffe1); /* Degrade de cores */
+  border-color: #6209c7a6;
+  margin-left: 10px; /* Espaçamento entre os botões */
+}
+
+.botao-topo:hover {
+  background: linear-gradient(to top, #7700ff, #530083fd, #a200fffd); /* Degrade de cores no hover */
+}
+/* Estilos para os botões na barra superior */
+.botao-topo {
+  background: linear-gradient(to top, #1e043b, #8c00ff9a, #8c00ffe1);
+  border-color: #6209c7a6;
+  margin-right: 10px;
+}
+
+.botao-topo:hover {
+  background: linear-gradient(to top, #7700ff, #530083fd, #a200fffd);
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #e9e6ec;
+}
+
+.card-title {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #dfdfdf;
+}
+
+/* Estilos para o cabeçalho da página */
+h1, h2, h3, label, a {
+  color: hsl(0, 0%, 0%);
+}
+
+/* Estilos para o texto descritivo */
+p {
+  color: #000000;
+}
+
+/* Estilos específicos para as seções de cada tipo de usuário */
+.professor-section {
+  margin-top: 20px;
+}
+
+.aluno-section {
+  margin-top: 20px;
+}
+
+/* Estilos para a tabela */
+table {
+  width: 100%;
+  border: 2px solid #a5a5a5ce;
+  background-color: #7000bb;
+  box-shadow: 0px 0px 2px 4px #350053cb;
+  margin-top: 100px;
+
+}
+
+table th, table td {
+  border: 1px solid #a7a7a7;
+  padding: 5px;
+  background-color: #ffffff;
+  text-align: center
+}
+
+
+/* Estilos para lista não ordenada */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para o rodapé */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #510f8f;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p, footer span {
+  color: #fff;
+}
