@@ -8,27 +8,31 @@
   <link rel="stylesheet" href="styles.css"> <!-- Arquivo de estilos personalizados -->
 </head>
 <body>
-    <!-- Topo fixo -->
-    <div class="topo-fixo">
-      <div class="container">
-        <div class="row">
-          <!-- Nome da instituição à esquerda -->
-          <div class="col-md-6">
-            <a href="index.html" class="nome-instituicao mr-auto">INSTITUIÇÃO EDUCA MAIS</a>
-          </div>
-          <!-- Botões nos cantos direitos -->
-          <div class="col-md-6 text-right">
-            <a href="#" onclick="window.history.back();" class="btn btn-secondary btn-lg ml-2 botao-topo">Voltar</a>
-          </div>
+  <!-- Topo fixo -->
+  <div class="topo-fixo">
+    <div class="container">
+      <div class="row">
+        <!-- Nome da instituição à esquerda -->
+        <div class="col-md-6">
+          <a href="index.html" class="nome-instituicao mr-auto">INSTITUIÇÃO EDUCA MAIS</a>
+        </div>
+        <!-- Botões nos cantos direitos -->
+        <div class="col-md-6 text-right">
+          <a href="#" onclick="window.history.back();" class="btn btn-secondary btn-lg ml-2 botao-topo">Voltar</a>
         </div>
       </div>
     </div>
+  </div>
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="text-center mb-4">Cadastro de Aluno</h2>
         <!-- Formulário de cadastro -->
         <form id="cadastroForm">
+          <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
           <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" name="email" required>
@@ -49,9 +53,10 @@
   <footer>
     <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
   </footer>
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script_cadastro_aluno.js"></script> <!-- Arquivo de scripts personalizados -->
+  <script src="scripts_cadastro_aluno.js"></script> <!-- Arquivo de scripts personalizados -->
 </body>
 </html>

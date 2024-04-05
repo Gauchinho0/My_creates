@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Aluno 1",
+    "email": "aluno1@example.com",
+    "senha": "senha123"
+  },
+  {
+    "nome": "Aluno 2",
+    "email": "aluno2@example.com",
+    "senha": "senha456"
+  },
+  {
+    "nome": "lucas",
+    "email": "lucas@gmail.com",
+    "senha": "senha123"
+  }
+]

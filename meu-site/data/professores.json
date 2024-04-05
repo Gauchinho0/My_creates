@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Professor 1",
+    "email": "professor1@example.com",
+    "senha": "senha123"
+  },
+  {
+    "nome": "Professor 2",
+    "email": "professor2@example.com",
+    "senha": "senha456"
+  },
+  {
+    "nome": "lucas",
+    "email": "lucas@instituicaoeducamais.com.br",
+    "senha": "senha123"
+  }
+]

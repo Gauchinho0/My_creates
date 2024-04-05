@@ -30,14 +30,17 @@
         <!-- Formulário de cadastro -->
         <form id="cadastroForm">
           <div class="form-group">
-            <label for="email">Email (após @instituiçãoeducamais.com.br):</label>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email (após @instituicaoeducamais.com.br):</label>
             <input type="email" class="form-control" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label for="senha">Senha:</label>
             <input type="password" class="form-control" id="senha" name="senha" required>
           </div>
-          <!-- Removido o campo de "Instituição" -->
           <div class="form-group">        
             <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
           </div>
@@ -52,9 +55,10 @@
   <footer>
     <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
   </footer>
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script_cadastro_professor.js"></script> <!-- Arquivo de scripts personalizados -->
+  <script src="scripts_cadastro_professor.js"></script> <!-- Arquivo de scripts personalizados -->
 </body>
 </html>

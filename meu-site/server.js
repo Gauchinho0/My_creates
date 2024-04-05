@@ -1,43 +1,124 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
+const bodyParser = require('body-parser');
+const fs = require('fs');
 const path = require('path');
-
 const app = express();
 const port = 3000;
 
-// Caminho para o banco de dados
-const dbPath = path.resolve(__dirname, 'banco_de_dados.db');
-const db = new sqlite3.Database(dbPath);
-
-// Middleware para permitir o acesso aos arquivos estáticos na pasta "public"
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/data', express.static(path.join(__dirname, 'data')));
 
-// Rota para obter todos os cursos
-app.get('/cursos', (req, res) => {
-    db.all('SELECT * FROM cursos', (err, rows) => {
+// Rota para servir a página inicial
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Autenticação e cadastro de alunos
+app.post('/login/aluno', (req, res) => {
+    const { email, senha } = req.body;
+    fs.readFile('data/alunos.json', 'utf8', (err, data) => {
         if (err) {
-            console.error(err.message);
-            res.status(500).send('Erro interno do servidor');
+            console.error(err);
+            res.status(500).json({ error: 'Erro ao ler os dados de alunos.' });
+            return;
+        }
+        const alunos = JSON.parse(data);
+        const aluno = alunos.find(a => a.email === email && a.senha === senha);
+        if (aluno) {
+            res.json({ message: 'Login bem-sucedido', aluno });
         } else {
-            res.json(rows);
+            res.status(401).json({ error: 'Credenciais inválidas' });
         }
     });
 });
 
-// Rota para obter todas as disciplinas de um curso específico
-app.get('/disciplinas/:cursoId', (req, res) => {
-    const cursoId = req.params.cursoId;
-    db.all('SELECT * FROM disciplinas WHERE curso_id = ?', [cursoId], (err, rows) => {
+app.post('/cadastro/aluno', (req, res) => {
+    const { nome, email, senha } = req.body;
+    fs.readFile('data/alunos.json', 'utf8', (err, data) => {
         if (err) {
-            console.error(err.message);
-            res.status(500).send('Erro interno do servidor');
+            console.error(err);
+            res.status(500).json({ error: 'Erro ao ler os dados de alunos.' });
+            return;
+        }
+        const alunos = JSON.parse(data);
+        const alunoExistente = alunos.find(a => a.email === email);
+        if (alunoExistente) {
+            res.status(400).json({ error: 'Já existe um aluno cadastrado com este e-mail.' });
+            return;
+        }
+        const novoAluno = { nome, email, senha };
+        alunos.push(novoAluno);
+        fs.writeFile('data/alunos.json', JSON.stringify(alunos, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                res.status(500).json({ error: 'Erro ao cadastrar aluno.' });
+                return;
+            }
+            res.json({ message: 'Cadastro de aluno realizado com sucesso', aluno: novoAluno });
+        });
+    });
+});
+
+// Autenticação e cadastro de professores
+app.post('/login/professor', (req, res) => {
+    const { email, senha } = req.body;
+    fs.readFile('data/professores.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Erro ao ler os dados de professores.' });
+            return;
+        }
+        const professores = JSON.parse(data);
+        const professor = professores.find(p => p.email === email && p.senha === senha);
+        if (professor) {
+            res.json({ message: 'Login bem-sucedido', professor });
         } else {
-            res.json(rows);
+            res.status(401).json({ error: 'Credenciais inválidas' });
         }
     });
 });
 
-// Iniciar o servidor
+app.post('/cadastro/professor', (req, res) => {
+    const { nome, email, senha } = req.body;
+    fs.readFile('data/professores.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Erro ao ler os dados de professores.' });
+            return;
+        }
+        const professores = JSON.parse(data);
+        const professorExistente = professores.find(p => p.email === email);
+        if (professorExistente) {
+            res.status(400).json({ error: 'Já existe um professor cadastrado com este e-mail.' });
+            return;
+        }
+        const novoProfessor = { nome, email, senha };
+        professores.push(novoProfessor);
+        fs.writeFile('data/professores.json', JSON.stringify(professores, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                res.status(500).json({ error: 'Erro ao cadastrar professor.' });
+                return;
+            }
+            res.json({ message: 'Cadastro de professor realizado com sucesso', professor: novoProfessor });
+        });
+    });
+});
+
+// Rota para obter as disciplinas
+app.get('/disciplinas', (req, res) => {
+    fs.readFile('data/disciplinas.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Erro ao ler as disciplinas.' });
+            return;
+        }
+        const disciplinas = JSON.parse(data);
+        res.json(disciplinas);
+    });
+});
+
 app.listen(port, () => {
-    console.log(`Servidor está ouvindo na porta ${port}`);
+    console.log(`Servidor está rodando em http://localhost:${port}`);
 });

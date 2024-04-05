@@ -1,0 +1,42 @@
+{
+  "Engenharia Civil": [
+    {
+      "disciplina": "Mecânica dos Fluidos",
+      "professor": "Prof. Carlos",
+      "periodo": "Manhã",
+      "horarios": ["08:00 - 10:00", "14:00 - 16:00", "19:00 - 21:00"]
+    },
+    {
+      "disciplina": "Estruturas de Concreto Armado",
+      "professor": "Prof. Ana",
+      "periodo": "Tarde",
+      "horarios": ["10:00 - 12:00", "16:00 - 18:00", "21:00 - 23:00"]
+    },
+    {
+      "disciplina": "Geotecnia",
+      "professor": "Prof. Roberto",
+      "periodo": "Noite",
+      "horarios": ["18:00 - 20:00", "20:00 - 22:00"]
+    }
+  ],
+  "Medicina": [
+    {
+      "disciplina": "Anatomia Humana",
+      "professor": "Prof. Maria",
+      "periodo": "Manhã",
+      "horarios": ["08:00 - 10:00", "14:00 - 16:00", "19:00 - 21:00"]
+    },
+    {
+      "disciplina": "Farmacologia Clínica",
+      "professor": "Prof. João",
+      "periodo": "Tarde",
+      "horarios": ["10:00 - 12:00", "16:00 - 18:00", "21:00 - 23:00"]
+    },
+    {
+      "disciplina": "Neurologia",
+      "professor": "Prof. Lucas",
+      "periodo": "Noite",
+      "horarios": ["18:00 - 20:00", "20:00 - 22:00"]
+    }
+  ]
+}
