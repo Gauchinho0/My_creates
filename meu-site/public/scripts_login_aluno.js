@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const senha = document.getElementById('senha').value;
 
   // Envia uma requisição POST para a rota de login de alunos no servidor
-  fetch('/login/aluno', { // Alteração na URL para corresponder à rota no servidor
+  fetch('/login/aluno', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   .then(data => {
     alert(data); // Exibe a mensagem de login bem-sucedido
     // Redireciona para a página principal ou realiza outra ação necessária após o login
-    window.location.href = 'portal_aluno.html'; // Redireciona para a página principal
+    window.location.href = 'portal_aluno.html'; // Redireciona para a página principal do aluno
   })
   .catch(error => {
     alert(error.message); // Exibe a mensagem de erro

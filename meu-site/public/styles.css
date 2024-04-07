@@ -31,6 +31,7 @@
   background: linear-gradient(to top, #1e043b, #8c00ff9a, #8c00ffe1); /* Degrade de cores */
   border-color: #6209c7a6;
   margin-left: 10px; /* Espaçamento entre os botões */
+  color: #fff; /* Cor do texto */
 }
 
 .botao-topo:hover {
@@ -102,6 +103,11 @@ body {
     color: #000000;
   }
 
+  ul {
+    list-style: none;
+    padding: -20px;
+  }
+  
 /* Estilos para o rodapé */
 footer {
   position: fixed;
@@ -111,6 +117,7 @@ footer {
   background-color: #510f8f;
   text-align: center;
   padding: 10px 0;
+  margin-top: 20px; /* Adicionando margem superior */
 }
 
 footer p, footer span {

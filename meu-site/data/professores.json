@@ -13,5 +13,10 @@
     "nome": "lucas",
     "email": "lucas@instituicaoeducamais.com.br",
     "senha": "senha123"
+  },
+  {
+    "nome": "eu mesmo",
+    "email": "eumesmo@instituicaoeducamais.com.br",
+    "senha": "senha123"
   }
 ]

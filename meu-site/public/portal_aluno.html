@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Aluno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles_portal.css">
 </head>
 <body>
@@ -29,20 +30,22 @@
         <table id="turmasTable">
             <thead>
                 <tr>
-                    <th>Número da Turma</th>
                     <th>Curso</th>
                     <th>Disciplina</th>
                     <th>Professor</th>
-                    <th>Horário Manhã</th>
-                    <th>Horário Tarde</th>
-                    <th>Horário Noite</th>
+                    <th>Dia Semana</th>
+                    <th>Periodo</th>
+                    <th>Horario</th>
+                    <th>numero de vagas</th>
+                    <th>Vagas Abertas</th>
+                    <th>Matricular-se</th> <!-- Botão para matricular-se -->
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="disciplinasTableBody">
                 <!-- Os dados das disciplinas serão carregados aqui -->
             </tbody>
         </table>
-    </section>
+    </section>       
     <footer>
         <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
     </footer>

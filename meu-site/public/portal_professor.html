@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Professor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles_portal.css">
 </head>
 <body>
@@ -24,33 +25,49 @@
     </div>
     <section id="turmas">
         <div>
-            <h2>Horário de Aulas</h2>
+          <h2>Horário de Aulas</h2>
         </div>
         <table id="turmasTable">
             <thead>
                 <tr>
-                    <th>Número da Turma</th>
-                    <th>Curso</th>
-                    <th>Disciplina</th>
-                    <th>Professor</th>
-                    <th>Horário Manhã</th>
-                    <th>Horário Tarde</th>
-                    <th>Horário Noite</th>
-                    <th>Ações</th>
+                  <th>Curso</th>
+                  <th>Disciplina</th>
+                  <th>Professor</th>
+                  <th>Dia Semana</th>
+                  <th>Periodo</th>
+                  <th>Horario</th>
+                  <th>numero de vagas</th>
+                  <th>Vagas Abertas</th>
+                  <th>Editar</th> <!-- Botão para matricular-se -->
                 </tr>
             </thead>
-            <tbody>
-                <!-- Os dados das turmas serão carregados aqui -->
+            <tbody id="disciplinasTableBody">
+                <!-- Os dados das disciplinas serão carregados aqui -->
             </tbody>
         </table>
-    </section>
-    
-    <section id="alunos">
-        <h2>Alunos Matriculados</h2>
-        <ul id="alunosList">
-            <!-- Aqui serão inseridos os alunos matriculados via JavaScript -->
-        </ul>
-    </section>
+    </section> 
+    <!-- Modal para exibir os detalhes da disciplina -->
+<div class="modal fade" id="detalhesDisciplinaModal" tabindex="-1" role="dialog" aria-labelledby="detalhesDisciplinaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="detalhesDisciplinaModalLabel">Detalhes da Disciplina</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p><strong>Curso:</strong> <span id="modal-curso"></span></p>
+              <p><strong>Disciplina:</strong> <span id="modal-disciplina"></span></p>
+              <p><strong>Professor:</strong> <span id="modal-professor"></span></p>
+              <p><strong>Dia da Semana:</strong> <span id="modal-diaSemana"></span></p>
+              <p><strong>Período:</strong> <span id="modal-periodo"></span></p>
+              <p><strong>Horários:</strong> <span id="modal-horarios"></span></p>
+              <p><strong>Vagas Disponíveis:</strong> <span id="modal-vagasDisponiveis"></span></p>
+          </div>
+      </div>
+  </div>
+</div>
     <footer>
         <p>&copy; 2024 Instituição Educa mais. Todos os direitos reservados.</p>
     </footer>
