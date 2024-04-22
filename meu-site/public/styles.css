@@ -73,6 +73,24 @@ body {
     color: #dfdfdf;
   }
   
+  .btn-primary {
+    background-color: #6f00ff;
+    border-color: #6f00ff; 
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background-color: #8d00df;
+    border-color: #8d00df;
+  }
+  
+  /* Estilo para os números grandes e coloridos */
+  .sppb-animated-number {
+    font-size: 60px; /* Tamanho grande */
+    color: #6f00ff; /* Cor do número */
+    font-weight: bold; /* Negrito */
+  }
+
   /* Estilos para o cabeçalho da página */
   h1 {
     color: hsl(0, 0%, 0%)

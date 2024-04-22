@@ -64,6 +64,18 @@ table th, table td {
   text-align: center;
 }
 
+.matricular-btn {
+  background-color: #6f00ff;
+  border-color: #6f00ff; 
+  color: #fff;
+}
+
+/* Estilo para o botão Matricular-se no hover */
+.matricular-btn:hover {
+  background-color: #8d00df;
+  border-color: #8d00df;
+}
+
 /* Estilos para os blocos de disciplinas */
 .card {
   background: linear-gradient(to top, #1e043b, #6209c7);

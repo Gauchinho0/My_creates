@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.host": "127.0.0.1:3000",
+    "liveServer.settings.proxy": {
+        "proxyUri": "http://127.0.0.1:3000"
+    },
+    "liveServer.settings.useLocalIp": true
+}

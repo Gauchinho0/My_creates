@@ -6,13 +6,13 @@
           "professor": "Prof. Carlos",
           "opcao_1": {
               "dia_semana": 2,
-              "periodo": 2,
-              "horario": ["18:00 - 21:00"]
+              "periodo": 3,
+              "horario": ["18:00 - 20:00"]
           },
           "opcao_2": {
               "dia_semana": 4,
               "periodo": 1,
-              "horario": ["08:00 - 10:00"]
+              "horario": ["07:00 - 09:00"]
           },
           "vagas_disponiveis": 10,
           "alunos_matriculados": []
@@ -23,8 +23,8 @@
           "professor": "Prof. Ana",
           "opcao_1": {
               "dia_semana": 1,
-              "periodo": 3,
-              "horario": ["08:00 - 11:00"]
+              "periodo": 1,
+              "horario": ["07:00 - 10:00"]
           },
           "opcao_2": {
               "dia_semana": 3,
@@ -40,13 +40,13 @@
           "professor": "Prof. Roberto",
           "opcao_1": {
               "dia_semana": 4,
-              "periodo": 1,
-              "horario": ["18:00 - 21:00"]
+              "periodo": 2,
+              "horario": ["13:00 - 15:00"]
           },
           "opcao_2": {
               "dia_semana": 5,
               "periodo": 3,
-              "horario": ["19:00 - 22:00"]
+              "horario": ["19:00 - 21:00"]
           },
           "vagas_disponiveis": 10,
           "alunos_matriculados": []
