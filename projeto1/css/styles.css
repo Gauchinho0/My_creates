@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o topo fixo */
+.topo-fixo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #03360cfd, #098524fd, #09ad2d); /* Degrade de cores no hover */
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto; /* Centralizar o conteúdo */
+  }
+  
+  .nome-instituicao {
+    position: relative;
+    font-weight: bold;
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 32px;
+  }
+  
+  /* Manter a mesma cor para todos os estados do link */
+  .nome-instituicao:hover,
+  .nome-instituicao:active,
+  .nome-instituicao:visited {
+    color: #ffffff; 
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #e9e6ec;
+  }
+  
+  .container {
+    padding: 30px 0;
+  }
+
+  a {
+    color:#ffffff
+  }
+
+  /* Estilos para o cabeçalho da página */
+  h1, h2, h3, label, p {
+    color: #000000;
+  }
+  
+  /* Estilos para listas */
+  ul {
+    list-style: none;
+    padding: -20px;
+  }
+
+
+ /* Estilo para o resultado do IMC */
+#bmi-result {
+  margin-top: 20px; /* Espaçamento superior */
+  padding: 15px; /* Espaçamento interno */
+  background-color: #f8f9fa; /* Cor de fundo */
+  border: 1px solid #ced4da; /* Borda sólida */
+  border-radius: 5px; /* Borda arredondada */
+  display: inline-block; /* Mostra como bloco inline */
+  width: auto; /* Largura automática baseada no conteúdo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+  text-align: center; /* Alinhamento do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+}
+
+ /* Estilo para o resultado do IMC */
+ #bmr-result {
+  margin-top: 20px; /* Espaçamento superior */
+  padding: 15px; /* Espaçamento interno */
+  background-color: #f8f9fa; /* Cor de fundo */
+  border: 1px solid #ced4da; /* Borda sólida */
+  border-radius: 5px; /* Borda arredondada */
+  display: inline-block; /* Mostra como bloco inline */
+  width: auto; /* Largura automática baseada no conteúdo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+  text-align: center; /* Alinhamento do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+}
+
+/* Estilos para o rodapé */
+footer {
+  position: fixed bottom;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:#054912fd;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px; /* Adicionando margem superior */
+}
+
+footer p, footer span {
+  position: fixed bottom;
+  color: #fff; /* Cor do texto dentro do rodapé */
+  padding-bottom: 10px; /* Adicionar padding no final do corpo para compensar a altura do rodapé */
+  margin-bottom: 5px; /* Garantir que não haja margem inferior padrão */
+}
+  
+  /* Estilo para o menu dropdown */
+  .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+  }
+  
+  .dropdown-menu a {
+      color: #000;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+  
+  .dropdown-menu a:hover {
+      background-color: #f2f2f2;
+  }
+  
