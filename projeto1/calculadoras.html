@@ -36,14 +36,15 @@
         <h1>Calculadoras de Saúde</h1>
 
         <h2>Calculadora de IMC</h2>
+        <p>O Índice de Massa Corporal (IMC) é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC também aponta níveis de magreza e obesidade, que são usados para nortear o trabalho de profissionais de saúde e de educadores físicos.</p>
         <form id="bmi-form">
             <div class="form-group">
                 <label for="bmi-weight">Peso (kg):</label>
-                <input type="number" class="form-control" id="bmi-weight" required>
+                <input type="number" class="form-control calc-input" id="bmi-weight" required>
             </div>
             <div class="form-group">
                 <label for="bmi-height">Altura (cm):</label>
-                <input type="number" class="form-control" id="bmi-height" required>
+                <input type="number" class="form-control calc-input" id="bmi-height" required>
             </div>
             <button type="submit" class="btn btn-primary">Calcular IMC</button>
         </form>
@@ -85,20 +86,21 @@
         </div>
 
         <h2>Calculadora de TMB (Taxa Metabólica Basal)</h2>
+        <p>A taxa metabólica basal (TMB) é a medida em calorias e pode variar de pessoa para pessoa de acordo com diferentes fatores fisiológicos como idade, sexo e nível de atividade física. Conhecer a sua taxa de metabolismo basal pode ser importante para quem busca emagrecer ou ganhar massa muscular, pois ajuda a determinar a quantidade de calorias que o corpo necessita consumir diariamente.</p>
         <p>Para mulheres: TMB = 655,1 + (9,563 × peso em kg) + (1,850 × altura em cm) - (4,676 × idade)</p>
         <p>Para homens: TMB = 66,5 + (13,75 × peso em kg) + (5,003 × altura em cm) - (6,75 × idade)</p>
         <form id="bmr-form">
             <div class="form-group">
                 <label for="bmr-weight">Peso (kg):</label>
-                <input type="number" class="form-control" id="bmr-weight" required>
+                <input type="number" class="form-control calc-input" id="bmr-weight" required>
             </div>
             <div class="form-group">
                 <label for="bmr-height">Altura (cm):</label>
-                <input type="number" class="form-control" id="bmr-height" required>
+                <input type="number" class="form-control calc-input" id="bmr-height" required>
             </div>
             <div class="form-group">
                 <label for="bmr-age">Idade:</label>
-                <input type="number" class="form-control" id="bmr-age" required>
+                <input type="number" class="form-control calc-input" id="bmr-age" required>
             </div>
             <div class="form-group">
                 <label for="bmr-gender">Gênero:</label>
@@ -114,7 +116,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Cuidado em Saúde. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Saúde Ativa. Todos os direitos reservados.</p>
     </footer>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
