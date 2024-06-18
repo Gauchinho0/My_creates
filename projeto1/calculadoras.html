@@ -1,126 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Ativa</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark topo-fixo">
-        <div class="container">
-            <a class="navbar-brand nome-instituicao" href="index.html">Saúde Ativa</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html">Início</a>
-                            <a class="dropdown-item" href="alimentacao.html">Dicas alimentação saudável</a>
-                            <a class="dropdown-item" href="exercicios.html">Dicas sobre Exercícios</a>
-                            <a class="dropdown-item" href="calculadoras.html">Calculadoras</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alimentação Saudável</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark topo-fixo">
+            <div class="container">
+                <a class="navbar-brand nome-instituicao" href="index.html">Saúde Ativa</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="index.html">Início</a>
+                                <a class="dropdown-item" href="alimentacao.html">Dicas Alimentação Saudável</a>
+                                <a class="dropdown-item" href="exercicios.html">Dicas sobre Exercícios</a>
+                                <a class="dropdown-item" href="calculadoras.html">Calculadoras</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1>Calculadoras de Saúde</h1>
+
+            <h2>Calculadora de IMC</h2>
+            <p>O Índice de Massa Corporal (IMC) é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC também aponta níveis de magreza e obesidade, que são usados para nortear o trabalho de profissionais de saúde e de educadores físicos.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="bmi-form">
+                        <div class="form-group">
+                            <label for="bmi-weight">Peso (kg):</label>
+                            <input type="number" class="form-control calc-input" id="bmi-weight" required oninput="this.value = Math.abs(this.value)">
                         </div>
-                    </li>
-                </ul>
+                        <div class="form-group">
+                            <label for="bmi-height">Altura (cm):</label>
+                            <input type="number" class="form-control calc-input" id="bmi-height" required oninput="this.value = Math.abs(this.value)">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calcular IMC</button>
+                    </form>
+                    <a id="bmi-result">Seu IMC: </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive custom-scrollbar">
+                        <table class="table table-striped" border="1" cellpadding="1" cellspacing="1">
+                            <tbody>
+                                <tr>
+                                    <th>IMC</th>
+                                    <th>Classificação</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>Menor que 18,5</strong></td>
+                                    <td>Magreza</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>18,5 a 24,9</strong></td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>25 a 29,9</strong></td>
+                                    <td>Sobrepeso</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>30 a 34,9</strong></td>
+                                    <td>Obesidade grau I</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>35 a 39,9</strong></td>
+                                    <td>Obesidade grau II</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maior que 40</strong></td>
+                                    <td>Obesidade grau III</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+
+            <h2>Calculadora de TMB (Taxa Metabólica Basal)</h2>
+            <p>A taxa metabólica basal (TMB) é a medida em calorias e pode variar de pessoa para pessoa de acordo com diferentes fatores fisiológicos como idade, sexo e nível de atividade física. Conhecer a sua taxa de metabolismo basal pode ser importante para quem busca emagrecer ou ganhar massa muscular, pois ajuda a determinar a quantidade de calorias que o corpo necessita consumir diariamente.</p>
+            <p><strong>Para mulheres: TMB = 655,1 + (9,563 × peso em kg) + (1,850 × altura em cm) - (4,676 × idade)</strong></p>
+            <p><strong>Para homens: TMB = 66,5 + (13,75 × peso em kg) + (5,003 × altura em cm) - (6,75 × idade)</strong></p>
+            <form id="bmr-form">
+                <div class="form-group">
+                    <label for="bmr-weight">Peso (kg):</label>
+                    <input type="number" class="form-control calc-input" id="bmr-weight" required oninput="this.value = Math.abs(this.value)">
+                </div>
+                <div class="form-group">
+                    <label for="bmr-height">Altura (cm):</label>
+                    <input type="number" class="form-control calc-input" id="bmr-height" required oninput="this.value = Math.abs(this.value)">
+                </div>
+                <div class="form-group">
+                    <label for="bmr-age">Idade:</label>
+                    <input type="number" class="form-control calc-input" id="bmr-age" required oninput="this.value = Math.abs(this.value)">
+                </div>
+                <div class="form-group">
+                    <label for="bmr-gender">Gênero:</label>
+                    <select class="form-control" id="bmr-gender" required>
+                        <option value="male">Masculino</option>
+                        <option value="female">Feminino</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular TMB</button>
+            </form>
+            <a id="bmr-result">Seu TMB: </a>
+
         </div>
-    </nav>
-    
-    <div class="container mt-5">
-        <h1>Calculadoras de Saúde</h1>
 
-        <h2>Calculadora de IMC</h2>
-        <p>O Índice de Massa Corporal (IMC) é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC também aponta níveis de magreza e obesidade, que são usados para nortear o trabalho de profissionais de saúde e de educadores físicos.</p>
-        <form id="bmi-form">
-            <div class="form-group">
-                <label for="bmi-weight">Peso (kg):</label>
-                <input type="number" class="form-control calc-input" id="bmi-weight" required>
-            </div>
-            <div class="form-group">
-                <label for="bmi-height">Altura (cm):</label>
-                <input type="number" class="form-control calc-input" id="bmi-height" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Calcular IMC</button>
-        </form>
-        <p id="bmi-result">Seu IMC: </p>
+        <footer>
+            <p>&copy; 2024 Saúde Ativa. Todos os direitos reservados.</p>
+        </footer>
 
-        <div class="table-responsive custom-scrollbar">
-            <table class="table table-striped" border="1" cellpadding="1" cellspacing="1">
-                <tbody>
-                    <tr>
-                        <th>IMC</th>
-                        <th>Classificação</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Menor que 18,5</strong></td>
-                        <td>Magreza</td>
-                    </tr>
-                    <tr>
-                        <td><strong>18,5 a 24,9</strong></td>
-                        <td>Normal</td>
-                    </tr>
-                    <tr>
-                        <td><strong>25 a 29,9</strong></td>
-                        <td>Sobrepeso</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30 a 34,9</strong></td>
-                        <td>Obesidade grau I</td>
-                    </tr>
-                    <tr>
-                        <td><strong>35 a 39,9</strong></td>
-                        <td>Obesidade grau II</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Maior que 40</strong></td>
-                        <td>Obesidade grau III</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
 
-        <h2>Calculadora de TMB (Taxa Metabólica Basal)</h2>
-        <p>A taxa metabólica basal (TMB) é a medida em calorias e pode variar de pessoa para pessoa de acordo com diferentes fatores fisiológicos como idade, sexo e nível de atividade física. Conhecer a sua taxa de metabolismo basal pode ser importante para quem busca emagrecer ou ganhar massa muscular, pois ajuda a determinar a quantidade de calorias que o corpo necessita consumir diariamente.</p>
-        <p>Para mulheres: TMB = 655,1 + (9,563 × peso em kg) + (1,850 × altura em cm) - (4,676 × idade)</p>
-        <p>Para homens: TMB = 66,5 + (13,75 × peso em kg) + (5,003 × altura em cm) - (6,75 × idade)</p>
-        <form id="bmr-form">
-            <div class="form-group">
-                <label for="bmr-weight">Peso (kg):</label>
-                <input type="number" class="form-control calc-input" id="bmr-weight" required>
-            </div>
-            <div class="form-group">
-                <label for="bmr-height">Altura (cm):</label>
-                <input type="number" class="form-control calc-input" id="bmr-height" required>
-            </div>
-            <div class="form-group">
-                <label for="bmr-age">Idade:</label>
-                <input type="number" class="form-control calc-input" id="bmr-age" required>
-            </div>
-            <div class="form-group">
-                <label for="bmr-gender">Gênero:</label>
-                <select class="form-control" id="bmr-gender" required>
-                    <option value="male">Masculino</option>
-                    <option value="female">Feminino</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Calcular TMB</button>
-        </form>
-        <p id="bmr-result">Seu TMB: </p>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Saúde Ativa. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-</body>
+    </body>
 </html>

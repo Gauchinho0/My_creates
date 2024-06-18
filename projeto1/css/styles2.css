@@ -14,12 +14,12 @@
 }
 
 .container {
-  width: 50%;
+  width: 50%; 
   margin: 0 auto;
   padding: 30px;
-  text-align: justify;
 }
 
+/* Nome da instituição */
 .nome-instituicao {
   position: relative;
   font-weight: bold;
@@ -45,16 +45,16 @@
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #00796b; 
+  background-color: #00796b;
   color: #ffffff; 
-  border: none; 
+  border: none;
 }
 
 /* Estilo para o menu dropdown */
 .dropdown-menu {
   display: none;
   position: absolute;
-  left: 20px; 
+  left: 20px; /* Alinhar à direita */
   background-color: #02811c;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -121,17 +121,15 @@ h1{
   text-align: center;
 }
 
-h2, h4, h5, h6 {
+
+h2, h3, h4, h5, h6 {
   color: #000000;
   text-align: justify; 
 }
 
-h3{
-  text-align: center;
-}
-
 p {
   text-indent: 1.5em; 
+  text-align: justify;
 }
 
 a {
@@ -139,66 +137,15 @@ a {
   text-align: justify; 
 }
 
-ul {
-  list-style: none;
-  padding: -20px;
+ol{
+  text-indent: 1.5em;
 }
 
-
-.table-striped{
-  width: 86%;
-}
-
-.form-control {
-  width: 12%;
-  margin-top: 0.9px;
-  text-align: justify;
-}
-
-/* Estilos específicos para os campos de texto das calculadoras */
-.calc-input {
-  width: 18%;
-  text-indent: 0; 
-  margin-bottom: 10px;
-  padding: 10px; 
-  font-size: 16px; 
-  border: 1px solid #ced4da; 
-  border-radius: 5px; 
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
-}
-
-#btn-primary {
-  color: #00e031;
-  }
-
-/* Estilo para o resultado do IMC */
-#bmi-result {
-  margin-top: 20px; 
-  padding: 15px; 
-  background-color: #f8f9fa; 
-  border: 1px solid #ced4da; 
-  border-radius: 5px; 
-  display: inline-block;
-  width: auto; 
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-  text-align: center; 
-  font-size: 18px; 
-  font-weight: bold; 
-}
-
-/* Estilo para o resultado do BMR */
-#bmr-result {
-  margin-top: 20px; 
-  padding: 15px; 
-  background-color: #f8f9fa; 
-  border: 1px solid #ced4da; 
-  border-radius: 5px; 
-  display: inline-block; 
-  width: auto; 
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+/* Estilo para centralizar imagens */
+img {
+  display: block;
+  margin: 30px auto; 
   text-align: center;
-  font-size: 18px;
-  font-weight: bold; 
 }
 
 /* Estilos para o rodapé */
@@ -220,3 +167,5 @@ footer p, footer span {
   padding-bottom: 10px; 
   margin-bottom: 5px; 
 }
+
+
