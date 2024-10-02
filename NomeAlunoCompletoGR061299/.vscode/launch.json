@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "PrincipalLabirinto",
+            "request": "launch",
+            "mainClass": "Etapa1.PrincipalLabirinto",
+            "projectName": "NomeAlunoCompletoGR061299_72133dce"
+        },
+        {
+            "type": "java",
+            "name": "ValidadorEtapa1Estudante",
+            "request": "launch",
+            "mainClass": "Etapa1.ValidadorEtapa1Estudante",
+            "projectName": "NomeAlunoCompletoGR061299_72133dce"
+        }
+    ]
+}
